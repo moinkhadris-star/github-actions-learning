@@ -1,0 +1,20 @@
+name : 01 - Hello world
+
+on:
+  push: 
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, github Actions"
+
+      - name: Show date
+        run: date
+
+      - name: List files
+        run: ls -la
