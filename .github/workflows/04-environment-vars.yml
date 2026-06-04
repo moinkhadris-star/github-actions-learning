@@ -11,26 +11,26 @@ jobs:
   use-env-var:
     runs-on: ubuntu-lastest
 
-  env:
-    JOB_VAR: "Job specific value"
+    env:
+      JOB_VAR: "Job specific value"
 
-  steps:
-    - name: Use global env Variables
-      run: |
-        echo "App name: $App_name"
-        echo "Environment: $Environment"
-    
-    - name: Use job env
-      run: echo "job var: $JOB_VAR"
+    steps:
+      - name: Use global env Variables
+        run: |
+          echo "App name: $App_name"
+          echo "Environment: $Environment"
+      
+      - name: Use job env
+        run: echo "job var: $JOB_VAR"
 
-    - name: Step var
-      env:
-        step_var: "Step specific value"
-      run: echo "step var: $step_var"
+      - name: Step var
+        env:
+          step_var: "Step specific value"
+        run: echo "step var: $step_var"
 
-    - name: GitHub context variables
-      run: |
-        echo "Repository: ${{ github.repository }}"
-        echo "Ref: ${{ github.ref }}"
-        echo "Actor: ${{ github.actor }}"
-        echo "Run ID: ${{ github.run_id }}"
+      - name: GitHub context variables
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Run ID: ${{ github.run_id }}"
