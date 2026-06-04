@@ -26,7 +26,7 @@ jobs:
       - name: Step var
         env:
           step_var: "Step specific value"
-        run: echo "step var: $step_var"
+        run: echo "step var - $step_var"
 
       - name: GitHub context variables
         run: |
