@@ -1,0 +1,38 @@
+name: 07 - Python CI
+
+on:
+  push:
+    branches: [main]
+  pull_reuest:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Display Python version
+      run: python --version
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        pytest tests/ -v --cov=src --cov-report=term
+
+    - name: Test Summary
+      run: echo "All test passed"
+
+  
