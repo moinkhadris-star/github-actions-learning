@@ -23,6 +23,6 @@ jobs:
       
       - name: Git information
         run: |
-        echo "Branch: ${{ github.ref}}"
-        echo "Commit: ${{ github.sha}}"
-        echo "Actor: ${{ github.actor}}"
+          echo "Branch: ${{ github.ref}}"
+          echo "Commit: ${{ github.sha}}"
+          echo "Actor: ${{ github.actor}}"
