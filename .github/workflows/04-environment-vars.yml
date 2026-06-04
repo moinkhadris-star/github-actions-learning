@@ -21,7 +21,7 @@ jobs:
           echo "Environment: $Environment"
       
       - name: Use job env
-        run: echo "job var: $JOB_VAR"
+        run: echo "job var: JOB_VAR"
 
       - name: Step var
         env:
