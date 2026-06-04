@@ -9,7 +9,7 @@ env:
 
 jobs:
   use-env-var:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     env:
       JOB_VAR: "Job specific value"
