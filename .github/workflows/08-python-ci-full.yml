@@ -3,7 +3,7 @@ name: 08 - Python CI full
 on:
   push:
     branches: [main]
-  pull_reuest:
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
