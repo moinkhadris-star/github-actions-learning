@@ -1,8 +1,7 @@
 name: Demo 2 - Syntax Error
 
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   test:

@@ -1,8 +1,6 @@
 name: 09 - Full Pipeline (Build → Test → Deploy)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:

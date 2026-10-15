@@ -1,8 +1,6 @@
 name : 01 - Hello world
 
 on:
-  push: 
-    branches: [main]
   workflow_dispatch:
 
 jobs:
